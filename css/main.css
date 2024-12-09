@@ -1,0 +1,119 @@
+.body {
+    height: 100vh;
+}
+
+.main-text {
+	position: relative;
+	font-size: 30px;
+	color: rgb(44, 40, 40);
+	margin-top: 20px;
+	height: 5px;
+	/* margin: auto 0; */
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 55px;
+    height: 100vh;
+    background-color: #f9f9f9;
+	background: linear-gradient(135deg, #f0f9ff, #cbebff);
+}
+
+.day {
+    border: 3px solid black;
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    /* grap работает если использовать flex. */
+    gap: 55px;
+    padding: 20px;
+    color: #333333;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	animation: fadeIn 1s ease-in-out;
+	border-radius: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.list {
+    gap: 55px;
+    display: flex;
+}
+
+.text {
+    color: #333; /* Нейтральный темный цвет */
+    font-weight: bold; /* Сделать текст немного жирным */
+    font-size: 24px; /* Увеличить размер текста */
+    text-align: center; /* Центрировать текст */
+    padding: 10px; /* Добавить отступы */
+    border: 2px solid #4CAF50; /* Рамка вокруг текста */
+    border-radius: 10px; /* Сделать углы закругленными */
+    background-color: #f9f9f9; /* Светлый фон */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    transition: 0.3s ease; /* Плавный переход для эффекта наведения */
+}
+
+.text:hover {
+	cursor: pointer;
+    background-color: #4CAF50; /* Зеленый фон при наведении */
+    color: #fff; /* Белый текст при наведении */
+    transform: scale(1.05); /* Легкое увеличение при наведении */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Увеличить тень */
+}
+
+.lesson {
+    padding: 5px 10px;
+    transition: 0.5s ease all;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.lesson:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    background-color: #f1f1f1;
+    border-radius: 80px;
+	background-color: #e0f7fa;
+    color: #00796b;
+}
+
+.lesson {
+    position: relative;
+  }
+  .lesson::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #000;
+}
+
+.lesson::after {
+    width: 0;
+    transition: 0.3s;
+  }
+  .lesson:hover:after {
+    width: 100%;
+}
+
+.lesson::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
